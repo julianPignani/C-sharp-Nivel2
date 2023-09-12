@@ -1,0 +1,7 @@
+D:\C.sharp\Curso C# Nivel2\POO1\ejemploPOO1\bin\Debug\ejemploPOO1.exe.config
+D:\C.sharp\Curso C# Nivel2\POO1\ejemploPOO1\bin\Debug\ejemploPOO1.exe
+D:\C.sharp\Curso C# Nivel2\POO1\ejemploPOO1\bin\Debug\ejemploPOO1.pdb
+D:\C.sharp\Curso C# Nivel2\POO1\ejemploPOO1\obj\Debug\ejemploPOO1.csproj.AssemblyReference.cache
+D:\C.sharp\Curso C# Nivel2\POO1\ejemploPOO1\obj\Debug\ejemploPOO1.csproj.CoreCompileInputs.cache
+D:\C.sharp\Curso C# Nivel2\POO1\ejemploPOO1\obj\Debug\ejemploPOO1.exe
+D:\C.sharp\Curso C# Nivel2\POO1\ejemploPOO1\obj\Debug\ejemploPOO1.pdb

@@ -1,0 +1,7 @@
+D:\C.sharp\Curso C# Nivel2\ejercicioPOO\desafio1\bin\Debug\desafio1.exe.config
+D:\C.sharp\Curso C# Nivel2\ejercicioPOO\desafio1\bin\Debug\desafio1.exe
+D:\C.sharp\Curso C# Nivel2\ejercicioPOO\desafio1\bin\Debug\desafio1.pdb
+D:\C.sharp\Curso C# Nivel2\ejercicioPOO\desafio1\obj\Debug\desafio1.csproj.AssemblyReference.cache
+D:\C.sharp\Curso C# Nivel2\ejercicioPOO\desafio1\obj\Debug\desafio1.csproj.CoreCompileInputs.cache
+D:\C.sharp\Curso C# Nivel2\ejercicioPOO\desafio1\obj\Debug\desafio1.exe
+D:\C.sharp\Curso C# Nivel2\ejercicioPOO\desafio1\obj\Debug\desafio1.pdb
