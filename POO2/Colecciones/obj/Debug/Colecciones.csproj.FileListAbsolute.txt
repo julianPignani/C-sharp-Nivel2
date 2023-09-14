@@ -1,0 +1,7 @@
+D:\C.sharp\Curso C# Nivel2\POO2\Colecciones\bin\Debug\Colecciones.exe.config
+D:\C.sharp\Curso C# Nivel2\POO2\Colecciones\bin\Debug\Colecciones.exe
+D:\C.sharp\Curso C# Nivel2\POO2\Colecciones\bin\Debug\Colecciones.pdb
+D:\C.sharp\Curso C# Nivel2\POO2\Colecciones\obj\Debug\Colecciones.csproj.AssemblyReference.cache
+D:\C.sharp\Curso C# Nivel2\POO2\Colecciones\obj\Debug\Colecciones.csproj.CoreCompileInputs.cache
+D:\C.sharp\Curso C# Nivel2\POO2\Colecciones\obj\Debug\Colecciones.exe
+D:\C.sharp\Curso C# Nivel2\POO2\Colecciones\obj\Debug\Colecciones.pdb
