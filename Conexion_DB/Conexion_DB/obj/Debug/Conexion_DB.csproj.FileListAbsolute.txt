@@ -1,0 +1,10 @@
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\bin\Debug\Conexion_DB.exe.config
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\bin\Debug\Conexion_DB.exe
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\bin\Debug\Conexion_DB.pdb
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.csproj.AssemblyReference.cache
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.Form1.resources
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.Properties.Resources.resources
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.csproj.GenerateResource.cache
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.csproj.CoreCompileInputs.cache
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.exe
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.pdb

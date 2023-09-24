@@ -1,0 +1,11 @@
+D:\C.sharp\Curso C# Nivel2\WinForm\ejemplo2\bin\Debug\ejemplo2.exe.config
+D:\C.sharp\Curso C# Nivel2\WinForm\ejemplo2\bin\Debug\ejemplo2.exe
+D:\C.sharp\Curso C# Nivel2\WinForm\ejemplo2\bin\Debug\ejemplo2.pdb
+D:\C.sharp\Curso C# Nivel2\WinForm\ejemplo2\obj\Debug\ejemplo2.csproj.AssemblyReference.cache
+D:\C.sharp\Curso C# Nivel2\WinForm\ejemplo2\obj\Debug\ejemplo2.Form1.resources
+D:\C.sharp\Curso C# Nivel2\WinForm\ejemplo2\obj\Debug\ejemplo2.Properties.Resources.resources
+D:\C.sharp\Curso C# Nivel2\WinForm\ejemplo2\obj\Debug\ejemplo2.csproj.GenerateResource.cache
+D:\C.sharp\Curso C# Nivel2\WinForm\ejemplo2\obj\Debug\ejemplo2.csproj.CoreCompileInputs.cache
+D:\C.sharp\Curso C# Nivel2\WinForm\ejemplo2\obj\Debug\ejemplo2.exe
+D:\C.sharp\Curso C# Nivel2\WinForm\ejemplo2\obj\Debug\ejemplo2.pdb
+D:\C.sharp\Curso C# Nivel2\WinForm\ejemplo2\obj\Debug\ejemplo2.frmPrincipal.resources
