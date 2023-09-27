@@ -1,0 +1,9 @@
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\negocio\bin\Debug\negocio.dll
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\negocio\bin\Debug\negocio.pdb
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\negocio\bin\Debug\dominio.dll
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\negocio\bin\Debug\dominio.pdb
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\negocio\obj\Debug\negocio.csproj.CopyComplete
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\negocio\obj\Debug\negocio.dll
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\negocio\obj\Debug\negocio.pdb

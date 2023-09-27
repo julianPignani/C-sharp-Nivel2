@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Windows.Forms; //incluir libreria
+using dominio;
 
-namespace Conexion_DB
+
+
+namespace negocio
 {
-    internal class PokemonNegocio
+    public class PokemonNegocio
     {
         //Creamos el metodo listar
         public List<Pokemon> listar()

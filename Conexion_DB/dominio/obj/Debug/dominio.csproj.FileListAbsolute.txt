@@ -1,0 +1,6 @@
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\dominio\bin\Debug\dominio.dll
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\dominio\bin\Debug\dominio.pdb
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\dominio\obj\Debug\dominio.dll
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\dominio\obj\Debug\dominio.pdb
