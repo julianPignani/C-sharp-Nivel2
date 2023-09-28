@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnVerDatos = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvPokemons = new System.Windows.Forms.DataGridView();
             this.picturePokemon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPokemons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePokemon)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnVerDatos
+            // btnAgregar
             // 
-            this.btnVerDatos.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerDatos.Location = new System.Drawing.Point(118, 12);
-            this.btnVerDatos.Name = "btnVerDatos";
-            this.btnVerDatos.Size = new System.Drawing.Size(125, 42);
-            this.btnVerDatos.TabIndex = 0;
-            this.btnVerDatos.Text = "Ver Datos";
-            this.btnVerDatos.UseVisualStyleBackColor = true;
+            this.btnAgregar.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(12, 306);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(110, 42);
+            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dgvPokemons
             // 
             this.dgvPokemons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPokemons.Location = new System.Drawing.Point(12, 60);
+            this.dgvPokemons.Location = new System.Drawing.Point(12, 29);
             this.dgvPokemons.Name = "dgvPokemons";
             this.dgvPokemons.Size = new System.Drawing.Size(601, 260);
             this.dgvPokemons.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // picturePokemon
             // 
-            this.picturePokemon.Location = new System.Drawing.Point(619, 60);
+            this.picturePokemon.Location = new System.Drawing.Point(619, 29);
             this.picturePokemon.Name = "picturePokemon";
             this.picturePokemon.Size = new System.Drawing.Size(258, 260);
             this.picturePokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -70,7 +71,7 @@
             this.ClientSize = new System.Drawing.Size(889, 369);
             this.Controls.Add(this.picturePokemon);
             this.Controls.Add(this.dgvPokemons);
-            this.Controls.Add(this.btnVerDatos);
+            this.Controls.Add(this.btnAgregar);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -82,7 +83,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnVerDatos;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvPokemons;
         private System.Windows.Forms.PictureBox picturePokemon;
     }

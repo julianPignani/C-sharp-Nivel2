@@ -13,3 +13,4 @@ D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\bin\Debug\dominio.pdb
 D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.csproj.CopyComplete
 D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\bin\Debug\negocio.dll
 D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\bin\Debug\negocio.pdb
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.frmAltaPokemon.resources

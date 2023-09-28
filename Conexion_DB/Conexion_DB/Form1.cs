@@ -51,5 +51,11 @@ namespace Conexion_DB
             }
            
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaPokemon alta = new frmAltaPokemon();
+            alta.ShowDialog(); //para q no me permita salir de la ventana hasta terminar
+        }
     }
 }
