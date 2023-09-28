@@ -63,6 +63,8 @@ namespace negocio
 
             try
             {
+                //llamamos a los metodos para enviar la consulta
+                //y para ejecutar la accion.
                 datos.setearQuery("Insert into POKEMONS (Numero, Nombre, Descripcion, Activo)values("+ nuevo.Numero + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', 1 )");
                 datos.ejecutarAccion();
             }

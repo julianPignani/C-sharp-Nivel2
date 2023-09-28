@@ -44,6 +44,7 @@ namespace negocio
                 throw ex;
             }
         }
+        //metodo que va a ejecutar la query del insert
         public void ejecutarAccion()
         {
             comando.Connection = conexion;
