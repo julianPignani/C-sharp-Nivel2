@@ -38,7 +38,11 @@ namespace negocio
                     aux.Numero = (int)lector["Numero"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
-                    aux.UrlImagen = (string)lector["UrlImagen"];
+
+                    //Validamos la urlImagen por si esta null (Sirve para cualquier columna que no puede ser null)
+                    if(!(lector["UrlImagen"] is DBNull)) //si no es null
+                        aux.UrlImagen = (string)lector["UrlImagen"];
+     
                     aux.Tipo = new Elemento();
                     aux.Tipo.Descripcion = (string)lector["Tipo"];
                     aux.Debilidad = new Elemento();
@@ -65,7 +69,9 @@ namespace negocio
             {
                 //llamamos a los metodos para enviar la consulta
                 //y para ejecutar la accion.
-                datos.setearQuery("Insert into POKEMONS (Numero, Nombre, Descripcion, Activo)values("+ nuevo.Numero + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', 1 )");
+                datos.setearQuery("Insert into POKEMONS (Numero, Nombre, Descripcion, Activo, IdTipo, IdDebilidad)values("+ nuevo.Numero + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', 1, @idTipo, @idDebilidad )");
+                datos.setearParametros("@idTipo", nuevo.Tipo.Id); //llamamos al metodo setearParametros
+                datos.setearParametros("@idDebilidad", nuevo.Debilidad.Id);//para pasarle lso id, Otra forma de realziar consultas
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

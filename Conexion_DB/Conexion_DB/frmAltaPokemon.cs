@@ -39,8 +39,8 @@ namespace Conexion_DB
                 poke.Descripcion = txtDescripcion.Text;
 
                 //capturamos lo que viene en el comboBox
-                poke.Tipo = (Elemento)cboTipo.SelectedItem();
-                poke.Debilidad =(Elemento) cboDebilidad.SelectedItem();
+                poke.Tipo = (Elemento)cboTipo.SelectedItem;
+                poke.Debilidad =(Elemento) cboDebilidad.SelectedItem;
 
                 //llamamos al la funcion agregar de pokemonNegocio
                 negocio.agregar(poke);

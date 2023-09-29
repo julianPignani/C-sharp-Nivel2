@@ -27,10 +27,18 @@ namespace Conexion_DB
         {
             //instanciamos la clase y llamamos al metodo
             PokemonNegocio negocio = new PokemonNegocio();
-            listaPokemon = negocio.listar();
-            dgvPokemons.DataSource = listaPokemon;
-            dgvPokemons.Columns["UrlImagen"].Visible = false; //Con esto hacemos q no muestr la columna en el ventana
-            cargarImagen(listaPokemon[0].UrlImagen);
+            try
+            {
+                listaPokemon = negocio.listar();
+                dgvPokemons.DataSource = listaPokemon;
+                dgvPokemons.Columns["UrlImagen"].Visible = false; //Con esto hacemos q no muestr la columna en el ventana
+                cargarImagen(listaPokemon[0].UrlImagen);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
         //Mostrar las imagenes seleccionadas
         private void dgvPokemons_SelectionChanged(object sender, EventArgs e)

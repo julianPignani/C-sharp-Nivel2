@@ -59,6 +59,12 @@ namespace negocio
                 throw ex;
             }
         }
+        //Metodo para recibir los parametros de la consulta
+        public void setearParametros(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor );
+        }
+
         public void cerrarConexion()
         {
             if (lector != null)
