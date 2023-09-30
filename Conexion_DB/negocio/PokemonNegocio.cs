@@ -69,9 +69,10 @@ namespace negocio
             {
                 //llamamos a los metodos para enviar la consulta
                 //y para ejecutar la accion.
-                datos.setearQuery("Insert into POKEMONS (Numero, Nombre, Descripcion, Activo, IdTipo, IdDebilidad)values("+ nuevo.Numero + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', 1, @idTipo, @idDebilidad )");
+                datos.setearQuery("Insert into POKEMONS (Numero, Nombre, Descripcion, Activo, IdTipo, IdDebilidad, UrlImagen)values("+ nuevo.Numero + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', 1, @idTipo, @idDebilidad, @urlImagen )");
                 datos.setearParametros("@idTipo", nuevo.Tipo.Id); //llamamos al metodo setearParametros
                 datos.setearParametros("@idDebilidad", nuevo.Debilidad.Id);//para pasarle lso id, Otra forma de realziar consultas
+                datos.setearParametros("@urlImagen", nuevo.UrlImagen);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

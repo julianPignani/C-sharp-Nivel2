@@ -37,6 +37,7 @@ namespace Conexion_DB
                 poke.Numero = int.Parse(txtNumero.Text);
                 poke.Nombre = txtNombre.Text;
                 poke.Descripcion = txtDescripcion.Text;
+                poke.UrlImagen = txtUrlImagen.Text;
 
                 //capturamos lo que viene en el comboBox
                 poke.Tipo = (Elemento)cboTipo.SelectedItem;
@@ -73,6 +74,25 @@ namespace Conexion_DB
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+        //Metodo leave del txtUrlImagen para cargarle la url y que muestre la imagen
+        private void txtUrlImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtUrlImagen.Text);
+        }
+        //Tener en cuenta q este metodo de cargar imagen ya esta en otra clase tmb
+        //Lo ideal seria crear una funcion afuera y llamarla en ambas clases
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxPokemon.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pbxPokemon.Load("https://i0.wp.com/casagres.com.ar/wp-content/uploads/2022/09/placeholder.png?ssl=1");
+            }
+
         }
     }
 }

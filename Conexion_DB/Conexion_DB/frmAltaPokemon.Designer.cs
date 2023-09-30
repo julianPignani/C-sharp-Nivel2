@@ -41,6 +41,10 @@ namespace Conexion_DB
             this.lblTipo = new System.Windows.Forms.Label();
             this.cboTipo = new System.Windows.Forms.ComboBox();
             this.cboDebilidad = new System.Windows.Forms.ComboBox();
+            this.txtUrlImagen = new System.Windows.Forms.TextBox();
+            this.lblUrlImagen = new System.Windows.Forms.Label();
+            this.pbxPokemon = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPokemon)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,28 +83,28 @@ namespace Conexion_DB
             this.txtNumero.Location = new System.Drawing.Point(126, 37);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(128, 20);
-            this.txtNumero.TabIndex = 3;
+            this.txtNumero.TabIndex = 0;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(126, 63);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(128, 20);
-            this.txtNombre.TabIndex = 4;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(126, 89);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(128, 20);
-            this.txtDescripcion.TabIndex = 5;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(68, 199);
+            this.btnAceptar.Location = new System.Drawing.Point(70, 238);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(91, 30);
             this.btnAceptar.TabIndex = 6;
@@ -113,7 +117,7 @@ namespace Conexion_DB
             this.btnCancelar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(193, 199);
+            this.btnCancelar.Location = new System.Drawing.Point(195, 238);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(91, 30);
             this.btnCancelar.TabIndex = 7;
@@ -125,7 +129,7 @@ namespace Conexion_DB
             // 
             this.lblDebilidad.AutoSize = true;
             this.lblDebilidad.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDebilidad.Location = new System.Drawing.Point(48, 139);
+            this.lblDebilidad.Location = new System.Drawing.Point(48, 165);
             this.lblDebilidad.Name = "lblDebilidad";
             this.lblDebilidad.Size = new System.Drawing.Size(72, 20);
             this.lblDebilidad.TabIndex = 8;
@@ -135,7 +139,7 @@ namespace Conexion_DB
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(79, 113);
+            this.lblTipo.Location = new System.Drawing.Point(79, 139);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(41, 20);
             this.lblTipo.TabIndex = 10;
@@ -145,25 +149,55 @@ namespace Conexion_DB
             // 
             this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(126, 115);
+            this.cboTipo.Location = new System.Drawing.Point(126, 141);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(128, 21);
-            this.cboTipo.TabIndex = 11;
+            this.cboTipo.TabIndex = 4;
             // 
             // cboDebilidad
             // 
             this.cboDebilidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDebilidad.FormattingEnabled = true;
-            this.cboDebilidad.Location = new System.Drawing.Point(126, 141);
+            this.cboDebilidad.Location = new System.Drawing.Point(126, 167);
             this.cboDebilidad.Name = "cboDebilidad";
             this.cboDebilidad.Size = new System.Drawing.Size(128, 21);
-            this.cboDebilidad.TabIndex = 12;
+            this.cboDebilidad.TabIndex = 5;
+            // 
+            // txtUrlImagen
+            // 
+            this.txtUrlImagen.Location = new System.Drawing.Point(126, 115);
+            this.txtUrlImagen.Name = "txtUrlImagen";
+            this.txtUrlImagen.Size = new System.Drawing.Size(128, 20);
+            this.txtUrlImagen.TabIndex = 3;
+            this.txtUrlImagen.Leave += new System.EventHandler(this.txtUrlImagen_Leave);
+            // 
+            // lblUrlImagen
+            // 
+            this.lblUrlImagen.AutoSize = true;
+            this.lblUrlImagen.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUrlImagen.Location = new System.Drawing.Point(33, 115);
+            this.lblUrlImagen.Name = "lblUrlImagen";
+            this.lblUrlImagen.Size = new System.Drawing.Size(79, 20);
+            this.lblUrlImagen.TabIndex = 13;
+            this.lblUrlImagen.Text = "Url Imagen:";
+            // 
+            // pbxPokemon
+            // 
+            this.pbxPokemon.Location = new System.Drawing.Point(302, 37);
+            this.pbxPokemon.Name = "pbxPokemon";
+            this.pbxPokemon.Size = new System.Drawing.Size(245, 231);
+            this.pbxPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxPokemon.TabIndex = 15;
+            this.pbxPokemon.TabStop = false;
             // 
             // frmAltaPokemon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 289);
+            this.ClientSize = new System.Drawing.Size(572, 290);
+            this.Controls.Add(this.pbxPokemon);
+            this.Controls.Add(this.txtUrlImagen);
+            this.Controls.Add(this.lblUrlImagen);
             this.Controls.Add(this.cboDebilidad);
             this.Controls.Add(this.cboTipo);
             this.Controls.Add(this.lblTipo);
@@ -180,6 +214,7 @@ namespace Conexion_DB
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAltaPokemon";
             this.Load += new System.EventHandler(this.frmAltaPokemon_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPokemon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +234,8 @@ namespace Conexion_DB
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.ComboBox cboTipo;
         private System.Windows.Forms.ComboBox cboDebilidad;
+        private System.Windows.Forms.TextBox txtUrlImagen;
+        private System.Windows.Forms.Label lblUrlImagen;
+        private System.Windows.Forms.PictureBox pbxPokemon;
     }
 }
