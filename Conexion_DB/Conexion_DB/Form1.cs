@@ -25,20 +25,7 @@ namespace Conexion_DB
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            //instanciamos la clase y llamamos al metodo
-            PokemonNegocio negocio = new PokemonNegocio();
-            try
-            {
-                listaPokemon = negocio.listar();
-                dgvPokemons.DataSource = listaPokemon;
-                dgvPokemons.Columns["UrlImagen"].Visible = false; //Con esto hacemos q no muestr la columna en el ventana
-                cargarImagen(listaPokemon[0].UrlImagen);
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
+            cargar();
         }
         //Mostrar las imagenes seleccionadas
         private void dgvPokemons_SelectionChanged(object sender, EventArgs e)
@@ -59,11 +46,31 @@ namespace Conexion_DB
             }
            
         }
+        //metodo para cargar la vista y actualizar cuando hacemos una modificacion
+        private void cargar()
+        {
+            //instanciamos la clase y llamamos al metodo
+            PokemonNegocio negocio = new PokemonNegocio();
+            try
+            {
+                listaPokemon = negocio.listar();
+                dgvPokemons.DataSource = listaPokemon;
+                dgvPokemons.Columns["UrlImagen"].Visible = false; //Con esto hacemos q no muestr la columna en el ventana
+                cargarImagen(listaPokemon[0].UrlImagen);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAltaPokemon alta = new frmAltaPokemon();
             alta.ShowDialog(); //para q no me permita salir de la ventana hasta terminar
+            cargar();
+                
         }
     }
 }
