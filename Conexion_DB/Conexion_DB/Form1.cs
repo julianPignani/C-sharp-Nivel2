@@ -84,5 +84,26 @@ namespace Conexion_DB
             modificar.ShowDialog();
             cargar();
         }
+
+        private void btnEliminarFisico_Click(object sender, EventArgs e)
+        {
+            PokemonNegocio negocio = new PokemonNegocio();
+            Pokemon seleccionado;
+            try
+            {
+               DialogResult respuesta = MessageBox.Show("¿Seguro que deseas eliminar este Pokemon?", "Eliminado", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                if( respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.Id);
+                    cargar(); //para actualziar
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

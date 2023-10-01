@@ -92,6 +92,7 @@ namespace negocio
             }
         }
 
+        //Metodo para agregar pokemons
         public void agregar(Pokemon nuevo) 
         {
             AccesoDatos datos = new AccesoDatos();
@@ -114,6 +115,22 @@ namespace negocio
             finally
             {
                 datos.cerrarConexion();
+            }
+        }
+
+        //metodo para eliminar Fisico Pokemons (esto borra de la bd tmb)
+        public void eliminar (int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearQuery("delete from POKEMONS where id = @id");
+                datos.setearParametros("@id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }
