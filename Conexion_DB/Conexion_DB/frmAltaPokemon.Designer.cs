@@ -212,7 +212,7 @@ namespace Conexion_DB
             this.Controls.Add(this.label1);
             this.Name = "frmAltaPokemon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAltaPokemon";
+            this.Text = "Agregar Pokemon";
             this.Load += new System.EventHandler(this.frmAltaPokemon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxPokemon)).EndInit();
             this.ResumeLayout(false);

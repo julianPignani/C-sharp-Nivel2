@@ -14,9 +14,19 @@ namespace Conexion_DB
 {
     public partial class frmAltaPokemon : Form
     {
+        //Cuando vos toques agregar esto se pone null, pero cuando tocamos modificar
+        //Nos manda al constructor que creamos
+        private Pokemon pokemon = null;
         public frmAltaPokemon()
         {
             InitializeComponent();
+        }
+        //Creamos el constructor para modificar
+        public frmAltaPokemon(Pokemon pokemon)
+        {
+            InitializeComponent();
+            this.pokemon = pokemon;
+            Text = "Modificar Pokemon";
         }
 
         //btnCancelar
@@ -27,25 +37,37 @@ namespace Conexion_DB
         //btnAceptar
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //instanciamos las dos clases
-            Pokemon poke = new Pokemon();
+            //instanciamos la  clase
             PokemonNegocio negocio = new PokemonNegocio();
 
             try
             {
+                //Si el pokemon esta null, significa que vamos a crear un pokemon, sino
+                //lo que hace es modificar el existente
+                if (pokemon == null)
+                    pokemon = new Pokemon();
                 //traemos los datos de la ventana
-                poke.Numero = int.Parse(txtNumero.Text);
-                poke.Nombre = txtNombre.Text;
-                poke.Descripcion = txtDescripcion.Text;
-                poke.UrlImagen = txtUrlImagen.Text;
+                pokemon.Numero = int.Parse(txtNumero.Text);
+                pokemon.Nombre = txtNombre.Text;
+                pokemon.Descripcion = txtDescripcion.Text;
+                pokemon.UrlImagen = txtUrlImagen.Text;
 
                 //capturamos lo que viene en el comboBox
-                poke.Tipo = (Elemento)cboTipo.SelectedItem;
-                poke.Debilidad =(Elemento) cboDebilidad.SelectedItem;
+                pokemon.Tipo = (Elemento)cboTipo.SelectedItem;
+                pokemon.Debilidad =(Elemento) cboDebilidad.SelectedItem;
 
-                //llamamos al la funcion agregar de pokemonNegocio
-                negocio.agregar(poke);
-                MessageBox.Show("Agregado exitosamente");
+
+                if (pokemon.Id != 0)
+                {
+                    negocio.modificar(pokemon);
+                    MessageBox.Show("Modificado exitosamente");
+                }
+                else
+                {
+                    //llamamos al la funcion agregar de pokemonNegocio
+                    negocio.agregar(pokemon);
+                    MessageBox.Show("Agregado exitosamente");
+                }
                 Close();
             }
             catch (Exception ex)
@@ -65,9 +87,26 @@ namespace Conexion_DB
                 //para que nos traiga los datos de la tabla elemento.
                 //y los muestre en el desplegable del comboBox de la app.
                 cboTipo.DataSource = elementoNegocio.listar();
+                cboTipo.ValueMember = "Id"; //Con esto hacemos q nos apareza el tipo
+                cboTipo.DisplayMember = "Descripcion"; //y la debilidad del pokmeon seleccionado
                 cboDebilidad.DataSource = elementoNegocio.listar();
+                cboDebilidad.ValueMember = "Id";
+                cboDebilidad.DisplayMember = "Descripcion";
 
-                //luego de esto, tenemos q capturarlo en el btnAceptar
+                //luego de esto, tenemos q capturarlo en el btnAceptar/btnModificar
+                if(pokemon != null)//Si pokemon es diferente de null, significa q modificamos
+                {
+                    //Mostramos los datos del pokemon a modificar
+                    txtNumero.Text = pokemon.Numero.ToString();
+                    txtNombre.Text = pokemon.Nombre;
+                    txtDescripcion.Text = pokemon.Descripcion;
+                    txtUrlImagen.Text = pokemon.UrlImagen;
+                    cargarImagen(pokemon.UrlImagen);
+                    cboTipo.SelectedValue = pokemon.Tipo.Id;
+                    cboDebilidad.SelectedValue = pokemon.Debilidad.Id;
+                        
+
+                }
             }
             catch (Exception ex)
             {

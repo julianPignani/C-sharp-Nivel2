@@ -13,13 +13,13 @@ using negocio;
 
 namespace Conexion_DB
 {
-    public partial class Form1 : Form
+    public partial class btnModificar : Form
     { 
 
         //Creamos una lista para ir mostrando las imagenes.
         private List<Pokemon> listaPokemon;
     
-        public Form1()
+        public btnModificar()
         {
             InitializeComponent();
         }
@@ -55,7 +55,8 @@ namespace Conexion_DB
             {
                 listaPokemon = negocio.listar();
                 dgvPokemons.DataSource = listaPokemon;
-                dgvPokemons.Columns["UrlImagen"].Visible = false; //Con esto hacemos q no muestr la columna en el ventana
+                dgvPokemons.Columns["UrlImagen"].Visible = false;
+                dgvPokemons.Columns["Id"].Visible = false;//Con esto hacemos q no muestr la columna en el ventana
                 cargarImagen(listaPokemon[0].UrlImagen);
             }
             catch (Exception ex)
@@ -71,6 +72,17 @@ namespace Conexion_DB
             alta.ShowDialog(); //para q no me permita salir de la ventana hasta terminar
             cargar();
                 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Traemos el pokemon sleecionado para modificar
+            Pokemon seleccionado;
+            seleccionado = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem;
+
+            frmAltaPokemon modificar = new frmAltaPokemon(seleccionado);
+            modificar.ShowDialog();
+            cargar();
         }
     }
 }

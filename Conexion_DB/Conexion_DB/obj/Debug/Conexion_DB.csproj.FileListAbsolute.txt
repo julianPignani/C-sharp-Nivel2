@@ -1,5 +1,4 @@
 D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.csproj.AssemblyReference.cache
-D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.Form1.resources
 D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.Properties.Resources.resources
 D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.csproj.GenerateResource.cache
 D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.csproj.CoreCompileInputs.cache
@@ -14,3 +13,4 @@ D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.csproj.
 D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\bin\Debug\negocio.dll
 D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\bin\Debug\negocio.pdb
 D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.frmAltaPokemon.resources
+D:\C.sharp\Curso C# Nivel2\Conexion_DB\Conexion_DB\obj\Debug\Conexion_DB.btnModificar.resources

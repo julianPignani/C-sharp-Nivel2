@@ -1,6 +1,6 @@
 ﻿namespace Conexion_DB
 {
-    partial class Form1
+    partial class btnModificar
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvPokemons = new System.Windows.Forms.DataGridView();
             this.picturePokemon = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPokemons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePokemon)).BeginInit();
             this.SuspendLayout();
@@ -67,16 +68,28 @@
             this.picturePokemon.TabIndex = 2;
             this.picturePokemon.TabStop = false;
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(128, 306);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 42);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Modificar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 369);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.picturePokemon);
             this.Controls.Add(this.dgvPokemons);
             this.Controls.Add(this.btnAgregar);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "btnModificar";
+            this.Text = "POKEDEX";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPokemons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePokemon)).EndInit();
@@ -89,6 +102,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvPokemons;
         private System.Windows.Forms.PictureBox picturePokemon;
+        private System.Windows.Forms.Button button1;
     }
 }
 
