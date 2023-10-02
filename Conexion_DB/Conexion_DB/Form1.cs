@@ -136,6 +136,12 @@ namespace Conexion_DB
         //buscar a través del filtro
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+
+        }
+
+        //Evento del txtBuscar para que vaya buscando mientras vamos escribiendo
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
             List<Pokemon> listaFiltrada;
 
             string filtro = txtFiltro.Text;
@@ -148,5 +154,6 @@ namespace Conexion_DB
             dgvPokemons.DataSource = listaFiltrada;
             ocultarColumna();
         }
+       
     }
 }
