@@ -87,15 +87,34 @@ namespace Conexion_DB
 
         private void btnEliminarFisico_Click(object sender, EventArgs e)
         {
+            eliminar();
+        }
+
+        private void btnEliminarLogico_Click(object sender, EventArgs e)
+        {
+            eliminar(true);
+        }
+        //funcion para eliminar/ bool logico = false significa que es un valor opcional
+        //si no le pasamos nada lo toma como false y lo toma como eliminaicon fisica
+        //si le pasamos true, va a tomar la eliminacion logica
+        private void eliminar (bool logico = false)
+        {
+
             PokemonNegocio negocio = new PokemonNegocio();
             Pokemon seleccionado;
             try
             {
-               DialogResult respuesta = MessageBox.Show("¿Seguro que deseas eliminar este Pokemon?", "Eliminado", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-                if( respuesta == DialogResult.Yes)
+                DialogResult respuesta = MessageBox.Show("¿Seguro que deseas eliminar este Pokemon?", "Eliminado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem;
-                    negocio.eliminar(seleccionado.Id);
+
+                    if (logico)
+                        negocio.eliminarLogico(seleccionado.Id);
+                    else
+                        negocio.eliminar(seleccionado.Id);
+                    
+
                     cargar(); //para actualziar
                 }
             }
