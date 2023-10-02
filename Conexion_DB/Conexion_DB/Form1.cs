@@ -30,8 +30,11 @@ namespace Conexion_DB
         //Mostrar las imagenes seleccionadas
         private void dgvPokemons_SelectionChanged(object sender, EventArgs e)
         {
-            Pokemon seleccionado = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.UrlImagen);
+            if (dgvPokemons.CurrentRow != null)
+            {
+                Pokemon seleccionado = (Pokemon)dgvPokemons.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.UrlImagen);
+            }
         }
         //Funcion para cargar imagen, y en caso de no cargar la imagen que muestre la del catch
         private void cargarImagen(string imagen)
@@ -55,8 +58,7 @@ namespace Conexion_DB
             {
                 listaPokemon = negocio.listar();
                 dgvPokemons.DataSource = listaPokemon;
-                dgvPokemons.Columns["UrlImagen"].Visible = false;
-                dgvPokemons.Columns["Id"].Visible = false;//Con esto hacemos q no muestr la columna en el ventana
+                ocultarColumna();
                 cargarImagen(listaPokemon[0].UrlImagen);
             }
             catch (Exception ex)
@@ -64,6 +66,12 @@ namespace Conexion_DB
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+        //Con esto hacemos q no muestre la columna en el ventana 
+        private void ocultarColumna()
+        {
+            dgvPokemons.Columns["UrlImagen"].Visible = false;
+            dgvPokemons.Columns["Id"].Visible = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -123,6 +131,22 @@ namespace Conexion_DB
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+        
+        //buscar a través del filtro
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            List<Pokemon> listaFiltrada;
+
+            string filtro = txtFiltro.Text;
+            if (filtro != "") //buscamos por el filtro
+                listaFiltrada = listaPokemon.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Tipo.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+            else //si buscamos en blanco, mostramos la lista original
+                listaFiltrada = listaPokemon;
+
+            dgvPokemons.DataSource = null; //Primero limpiamos el data source y luego le asiganmos la lista
+            dgvPokemons.DataSource = listaFiltrada;
+            ocultarColumna();
         }
     }
 }
