@@ -44,6 +44,7 @@ namespace Conexion_DB
             this.txtUrlImagen = new System.Windows.Forms.TextBox();
             this.lblUrlImagen = new System.Windows.Forms.Label();
             this.pbxPokemon = new System.Windows.Forms.PictureBox();
+            this.btnLevantarImg = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPokemon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@ namespace Conexion_DB
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(59, 37);
+            this.label1.Location = new System.Drawing.Point(69, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 20);
             this.label1.TabIndex = 0;
@@ -62,7 +63,7 @@ namespace Conexion_DB
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(59, 63);
+            this.label2.Location = new System.Drawing.Point(69, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 1;
@@ -72,7 +73,7 @@ namespace Conexion_DB
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 89);
+            this.label3.Location = new System.Drawing.Point(38, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 2;
@@ -80,23 +81,23 @@ namespace Conexion_DB
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(126, 37);
+            this.txtNumero.Location = new System.Drawing.Point(147, 43);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(128, 20);
+            this.txtNumero.Size = new System.Drawing.Size(149, 21);
             this.txtNumero.TabIndex = 0;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(126, 63);
+            this.txtNombre.Location = new System.Drawing.Point(147, 73);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(128, 20);
+            this.txtNombre.Size = new System.Drawing.Size(149, 21);
             this.txtNombre.TabIndex = 1;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(126, 89);
+            this.txtDescripcion.Location = new System.Drawing.Point(147, 103);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(128, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(149, 21);
             this.txtDescripcion.TabIndex = 2;
             // 
             // btnAceptar
@@ -104,9 +105,9 @@ namespace Conexion_DB
             this.btnAceptar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(70, 238);
+            this.btnAceptar.Location = new System.Drawing.Point(82, 275);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(91, 30);
+            this.btnAceptar.Size = new System.Drawing.Size(106, 35);
             this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -117,9 +118,9 @@ namespace Conexion_DB
             this.btnCancelar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(195, 238);
+            this.btnCancelar.Location = new System.Drawing.Point(227, 275);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(91, 30);
+            this.btnCancelar.Size = new System.Drawing.Size(106, 35);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -129,7 +130,7 @@ namespace Conexion_DB
             // 
             this.lblDebilidad.AutoSize = true;
             this.lblDebilidad.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDebilidad.Location = new System.Drawing.Point(48, 165);
+            this.lblDebilidad.Location = new System.Drawing.Point(56, 190);
             this.lblDebilidad.Name = "lblDebilidad";
             this.lblDebilidad.Size = new System.Drawing.Size(72, 20);
             this.lblDebilidad.TabIndex = 8;
@@ -139,7 +140,7 @@ namespace Conexion_DB
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(79, 139);
+            this.lblTipo.Location = new System.Drawing.Point(92, 160);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(41, 20);
             this.lblTipo.TabIndex = 10;
@@ -149,25 +150,25 @@ namespace Conexion_DB
             // 
             this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(126, 141);
+            this.cboTipo.Location = new System.Drawing.Point(147, 163);
             this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(128, 21);
+            this.cboTipo.Size = new System.Drawing.Size(149, 23);
             this.cboTipo.TabIndex = 4;
             // 
             // cboDebilidad
             // 
             this.cboDebilidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDebilidad.FormattingEnabled = true;
-            this.cboDebilidad.Location = new System.Drawing.Point(126, 167);
+            this.cboDebilidad.Location = new System.Drawing.Point(147, 193);
             this.cboDebilidad.Name = "cboDebilidad";
-            this.cboDebilidad.Size = new System.Drawing.Size(128, 21);
+            this.cboDebilidad.Size = new System.Drawing.Size(149, 23);
             this.cboDebilidad.TabIndex = 5;
             // 
             // txtUrlImagen
             // 
-            this.txtUrlImagen.Location = new System.Drawing.Point(126, 115);
+            this.txtUrlImagen.Location = new System.Drawing.Point(147, 133);
             this.txtUrlImagen.Name = "txtUrlImagen";
-            this.txtUrlImagen.Size = new System.Drawing.Size(128, 20);
+            this.txtUrlImagen.Size = new System.Drawing.Size(149, 21);
             this.txtUrlImagen.TabIndex = 3;
             this.txtUrlImagen.Leave += new System.EventHandler(this.txtUrlImagen_Leave);
             // 
@@ -175,7 +176,7 @@ namespace Conexion_DB
             // 
             this.lblUrlImagen.AutoSize = true;
             this.lblUrlImagen.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUrlImagen.Location = new System.Drawing.Point(33, 115);
+            this.lblUrlImagen.Location = new System.Drawing.Point(38, 133);
             this.lblUrlImagen.Name = "lblUrlImagen";
             this.lblUrlImagen.Size = new System.Drawing.Size(79, 20);
             this.lblUrlImagen.TabIndex = 13;
@@ -183,18 +184,30 @@ namespace Conexion_DB
             // 
             // pbxPokemon
             // 
-            this.pbxPokemon.Location = new System.Drawing.Point(302, 37);
+            this.pbxPokemon.Location = new System.Drawing.Point(352, 43);
             this.pbxPokemon.Name = "pbxPokemon";
-            this.pbxPokemon.Size = new System.Drawing.Size(245, 231);
+            this.pbxPokemon.Size = new System.Drawing.Size(286, 267);
             this.pbxPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxPokemon.TabIndex = 15;
             this.pbxPokemon.TabStop = false;
             // 
+            // btnLevantarImg
+            // 
+            this.btnLevantarImg.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLevantarImg.Location = new System.Drawing.Point(303, 133);
+            this.btnLevantarImg.Name = "btnLevantarImg";
+            this.btnLevantarImg.Size = new System.Drawing.Size(30, 23);
+            this.btnLevantarImg.TabIndex = 16;
+            this.btnLevantarImg.Text = "+";
+            this.btnLevantarImg.UseVisualStyleBackColor = true;
+            this.btnLevantarImg.Click += new System.EventHandler(this.btnLevantarImg_Click);
+            // 
             // frmAltaPokemon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 290);
+            this.ClientSize = new System.Drawing.Size(667, 335);
+            this.Controls.Add(this.btnLevantarImg);
             this.Controls.Add(this.pbxPokemon);
             this.Controls.Add(this.txtUrlImagen);
             this.Controls.Add(this.lblUrlImagen);
@@ -210,6 +223,7 @@ namespace Conexion_DB
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmAltaPokemon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Pokemon";
@@ -237,5 +251,6 @@ namespace Conexion_DB
         private System.Windows.Forms.TextBox txtUrlImagen;
         private System.Windows.Forms.Label lblUrlImagen;
         private System.Windows.Forms.PictureBox pbxPokemon;
+        private System.Windows.Forms.Button btnLevantarImg;
     }
 }

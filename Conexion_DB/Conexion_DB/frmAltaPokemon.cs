@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dominio;//agregar
 using negocio;//agregar
+using System.Configuration;
 
 namespace Conexion_DB
 {
@@ -17,6 +19,8 @@ namespace Conexion_DB
         //Cuando vos toques agregar esto se pone null, pero cuando tocamos modificar
         //Nos manda al constructor que creamos
         private Pokemon pokemon = null;
+
+        private OpenFileDialog archivo = null;
         public frmAltaPokemon()
         {
             InitializeComponent();
@@ -68,6 +72,11 @@ namespace Conexion_DB
                     negocio.agregar(pokemon);
                     MessageBox.Show("Agregado exitosamente");
                 }
+
+                //Guardo la imagen si la levantó localmente
+                if(archivo != null)
+                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+
                 Close();
             }
             catch (Exception ex)
@@ -130,6 +139,23 @@ namespace Conexion_DB
             catch (Exception ex)
             {
                 pbxPokemon.Load("https://i0.wp.com/casagres.com.ar/wp-content/uploads/2022/09/placeholder.png?ssl=1");
+            }
+
+        }
+        //Evento para levantar una imagen desde un archivo
+        private void btnLevantarImg_Click(object sender, EventArgs e)
+        {
+            archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg";
+            if(archivo.ShowDialog() == DialogResult.OK)
+            {
+                txtUrlImagen.Text = archivo.FileName;
+                cargarImagen(archivo.FileName);
+
+                //Guardo la imagen en el evento aceptar
+                // tener en cuenta de agregar la ruta en la configuracion
+                
+
             }
 
         }
